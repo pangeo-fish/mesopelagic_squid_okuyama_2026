@@ -6,10 +6,6 @@ The diamond squid (*Thysanoteuthis rhombus*, also called **sodeika**) is a large
 
 This project uses **biologging tags (MiniPAT, Wildlife Computers)** to collect depth, temperature, and light data. These observations are integrated with ocean model outputs and processed through the **PANGEO-FISH** software to reconstruct squid migration pathways and vertical behavior. The goal is to better understand habitat use and movement ecology while developing reproducible workflows for biologging data analysis.
 
-References:
-- [Japan Fisheries Research Agency squid symposium report (2004)](http://jsnfri.fra.affrc.go.jp/shigen/ika_kaigi/contents/H16/H16-2.pdf)
-- [National Diet Library catalog entry](https://ndlsearch.ndl.go.jp/books/R100000002-I000008086734)
-
 ---
 
 ## Study Area
