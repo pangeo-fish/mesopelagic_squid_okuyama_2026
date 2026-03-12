@@ -67,7 +67,7 @@ This bounding box covers the western North Pacific, including release and recapt
 
 - **Position Estimation:**  
   - Performed with **PANGEO-FISH** using depth & temperature matching against ocean model fields  
-    - @notebook link here @etienne 
+    - @notebook link here @etienne put in ./calculation/
   - Ocean model sources:  
     - Copernicus Marine Service (daily, ~10 km resolution)  
       - @etienne Link to the input indicated in the above notebook  
