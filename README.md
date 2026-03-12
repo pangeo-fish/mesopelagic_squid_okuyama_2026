@@ -24,8 +24,8 @@ This bounding box covers the western North Pacific, including release and recapt
 ## Tag Specifications
 - **Tag model:** MiniPAT (Wildlife Computers)
 - **Measured parameters:** depth (m), temperature (°C), relative light intensity
-- **Sampling interval (clarified):**
-  - **Raw archival sampling interval:** configurable on the tag (fast archive possible, e.g., ~1 s for certain products); **independent** of the transmitted time-series interval.
+- **Sampling interval :**
+  - **Raw archival sampling interval:** 1 seconds; **independent** of the transmitted time-series interval.
   - **Satellite-transmitted time series:** options are **75, 150, 300, 450, or 600 seconds** (i.e., 1.25–10 minutes). Our dataset uses **5 minutes (300 s)**.
 - **Deployment & recapture:**
   - Release: reported by fishers (lat/lon at deployment)
@@ -39,18 +39,6 @@ This bounding box covers the western North Pacific, including release and recapt
 - **Depth & temperature:**
   - **Transmitted time series:** 5-minute interval (300 s) in this dataset
   - Rapid vertical movements (~500 m within 5 minutes) were observed, consistent with squid behavior
-
-- **Light data:**
-  - *Light Level*: base sensor values (rarely transmitted fully via Argos)
-  - *Light Curve*: derived by MiniPAT based on Light Level
-  - Limitations: Our analysis relies on Light Level data. Only Tag ID 208992 (directly retrieved) contains Light Level records. No method has yet been identified for estimating Light Level from Light Curve.
-  - Example dataset: Tag ID 208992 (directly retrieved) contains Light Level records
-
-- **Raw data access:**
-  - [All MiniPAT datasets](https://www.dropbox.com/scl/fi/1vdqgipvl363k1pb7hked/batch.zip?rlkey=8c0yr4qqmge6sptlxcslsg1vo&dl=0)
-  - [Direct recovery dataset (ID208992)](https://www.dropbox.com/scl/fi/1z11tg7bqalphx1xdozeh/Yae_208992Direct-retrieve.zip?rlkey=jd56vfyb7zfsbof9teyvsnp2n&dl=0)
-  - [Wildlife Computers DAP & IGOR User Guide](https://static.wildlifecomputers.com/DAP-and-IGOR-User-Guide.pdf)
-
 
 
 ---
@@ -78,30 +66,22 @@ This bounding box covers the western North Pacific, including release and recapt
   Method for extracting tag information from MiniPAT to create input for PANGEO-FISH.  
   - All timestamps converted to **UTC** for consistency  
   - Input organized per individual (tag ID) with dedicated folders  
-  - Transmitted time series conversion to PANGEO-FISH input: **@notebook link here**  
-  - Recovered tag time series conversion to PANGEO-FISH input: **@notebook link here**  
-
-- **Light Data Analysis:**  
-  - Light-based geolocation currently on hold due to inconsistencies  
-  - Further work needed to reconstruct raw light levels from transmitted products  
-  - Archival tag light PDF computation: **@notebook link here**  
+  - Transmitted time series conversion to PANGEO-FISH input: **@notebook link here**  @etienne
+  - Recovered tag time series conversion to PANGEO-FISH input: **@notebook link here**  @etienne
 
 - **Position Estimation:**  
   - Performed with **PANGEO-FISH** using depth & temperature matching against ocean model fields  
-    - @notebook link here  
+    - @notebook link here @etienne 
   - Ocean model sources:  
     - Copernicus Marine Service (daily, ~10 km resolution)  
-      - Link to the input indicated in the above notebook  
-    - JAMSTEC JCOPE (hourly, ~3 km resolution, extending to seabed, sigma coordinate)  
-      - Interpolated data, up to 500 km in NetCDF  
-        - a kerchunk version, if yes **@notebook link here** 
-      - Original sigma-coordinate data, in-house development for transformation to Zarr format to connect to PANGEO-FISH  
-        - Link to the code here   **@notebook link here**
+      - @etienne Link to the input indicated in the above notebook  
 
   - Bathymetry sources:  
-    - Link to the HEALPix-converted bathymetry  
-      - **@notebook link here** for the bathymetry conversion 
+    - @etienne to update the source of bathymetry:cf link to where you downloaded.   
+      
+- **Result analysis :**  
+  - notebook for S1(variance), S3(each tag), Fig2(all tag) @etienne.
+ 
+    
 
-## thoughts further work:
-  - Higher-resolution JAMSTEC data may improve trajectory reconstruction  ?
-  - UZ , VZ, etc extract information from pdf
+
