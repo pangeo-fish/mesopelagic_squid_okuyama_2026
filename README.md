@@ -58,25 +58,20 @@ This bounding box covers the western North Pacific, including release and recapt
 ---
 
 ## Methodology
-- **Tag Data Handling:**  
-  Method for extracting tag information from MiniPAT to create input for PANGEO-FISH.  
-  - All timestamps converted to **UTC** for consistency  
-  - Input organized per individual (tag ID) with dedicated folders  
-  - Transmitted time series conversion to PANGEO-FISH input: **@notebook link here**  @etienne
-  - Recovered tag time series conversion to PANGEO-FISH input: **@notebook link here**  @etienne
+- **Tag Data Handling:**
+  - All timestamps converted to **UTC** for consistency
+  - Input organized per individual (tag ID) with dedicated folders
+  - Transmitted and Recovered time series conversion to PANGEO-FISH input: [notebook](convert_csv.ipynb)
 
-- **Position Estimation:**  
-  - Performed with **PANGEO-FISH** using depth & temperature matching against ocean model fields  
-    - @notebook link here @etienne put in ./calculation/
-  - Ocean model sources:  
-    - Copernicus Marine Service (daily, ~10 km resolution)  
-      - @etienne Link to the input indicated in the above notebook  
+- **Position Estimation:**
+  - Performed with **PANGEO-FISH** using depth & temperature matching against ocean model fields
+    - Individual tag notebooks: [tags_notebooks_calculation/](tags_notebooks_calculation/)
+  - Ocean model: [Global Ocean Physics Reanalysis](https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/description) (Copernicus, daily, ~10 km)
+  - Bathymetry: [GEBCO 2024](https://www.gebco.net/data-products-gridded-bathymetry-data/gebco2024-grid)
 
-  - Bathymetry sources:  
-    - @etienne to update the source of bathymetry:cf link to where you downloaded.   
-      
-- **Result analysis :**  
-  - notebook for S1(variance), S3(each tag), Fig2(all tag) @etienne.
+- **Result analysis:**
+  - S1 (variance): [notebook](variance_calculation.ipynb)
+  - S3 (each tag) & Fig2 (all tags): [notebook](current_viz_paper.ipynb)
  
     
 
